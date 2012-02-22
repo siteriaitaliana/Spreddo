@@ -1,0 +1,8 @@
+
+<h1> <%=  @rss.channel.title   %> </h1>
+
+<% @rss.items.each do |item| %>
+    <h2> <%=  item.title   %> </h2>
+    <p>  <%= item.content  %></p>
+<% end %>
+
