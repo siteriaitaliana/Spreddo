@@ -1,0 +1,12 @@
+<h1> Feeds </h1>
+
+<% @bloomberg_rss.items.each do |item| %>
+    <h2> <%=  item.title.html_safe   %> </h2>
+    <p>  <%= item.content  %></p>
+<% end %>
+
+<% @yahoo_finance_banking.items.each do |item| %>
+    <h2> <%=  item.title.html_safe   %> </h2>
+    <p>  <%= item.description  %></p>
+<% end %>
+
