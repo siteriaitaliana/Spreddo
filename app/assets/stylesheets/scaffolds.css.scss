@@ -1,12 +1,12 @@
 body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  background-color: #29264d;
+  color: #bff740;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 16px;
   line-height: 18px; }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px; }
 
@@ -16,41 +16,17 @@ pre {
   font-size: 11px; }
 
 a {
-  color: #000;
+  color: #A6A6FF;
   &:visited {
-    color: #666; }
+    color: #A6A6FF; }
   &:hover {
-    color: #fff;
-    background-color: #000; } }
+    color: #74d0f4; } }
 
 div {
   &.field, &.actions {
     margin-bottom: 10px; } }
 
-#notice {
-  color: green; }
-
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table; }
-
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff; }
-  ul li {
-    font-size: 12px;
-    list-style: square; } }
+h1{
+  color: rgb(143, 191, 255);
+  text-shadow: 0 0 6px rgba(56,187,253,.7);
+}
