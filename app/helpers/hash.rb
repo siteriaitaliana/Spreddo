@@ -1,4 +1,4 @@
-class ::Hash
+class Hash
   def method_missing(name)
     return self[name] if key? name
 

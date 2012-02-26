@@ -1,0 +1,21 @@
+{
+    "bloomberg": {
+        "source": "Bloomberg",
+        "url": "http://inside.bloomberg.com/blog/atom.xml"
+    },
+    "yahoo":{
+        "source": "YahooFinanceBanking",
+        "url": "http://finance.yahoo.com/rss/banking"
+    },
+    "ft_uk":{
+        "source": "FinancialTimesUk",
+        "url": "http://www.ft.com/rss/home/uk"
+    },
+    "ft_companies":{
+        "source": "FinancialTimesCompanies",
+        "url": "http://www.ft.com/rss/companies"
+    }
+
+
+}
+

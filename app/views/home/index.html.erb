@@ -1,1 +1,7 @@
 <h1>Top 10 Suggestions</h1>
+
+<% @matches.sort_by { |k,v| v }.reverse.first(10).each do |k,v| %>
+
+   <h2><%="#{k.upcase} = #{v}" %></h2>
+    <% #TODO: Add link to corresponding articles %>
+<% end %>
