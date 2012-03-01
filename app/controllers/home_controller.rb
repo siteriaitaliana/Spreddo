@@ -11,7 +11,7 @@ class HomeController < ApplicationController
 
   def scan_rss (regex)
     total_match = 0
-    feeds = Feed.all(:order => "source", :order => "created_at")
+    feeds = Feed.all(:order => "source", :conditions => ["DATE(created_at) = DATE(?)", Time.now], :order => "created_at")
     feeds.map do |feed|
       total_match += feed.content.downcase.scan(/#{regex.downcase}/).size
       total_match += feed.title.downcase.scan(/#{regex.downcase}/).size

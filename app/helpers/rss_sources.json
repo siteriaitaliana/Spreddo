@@ -14,6 +14,14 @@
     "ft_companies":{
         "source": "FinancialTimesCompanies",
         "url": "http://www.ft.com/rss/companies"
+    },
+    "sole24ore": {
+        "source": "IlSole24Ore",
+        "url":"http://www.ilsole24ore.com/rss/notizie/europa.xml"
+    },
+    "nytimes":{
+        "source": "NYTimes - Europe",
+        "url": "http://feeds.nytimes.com/nyt/rss/Europe"
     }
 
 
