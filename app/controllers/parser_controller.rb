@@ -4,7 +4,7 @@ require 'json'
 
 class ParserController < ApplicationController
   def show
-    @feeds = Feed.all(:order => "source", :order => "created_at")
+    @feeds = Feed.all(:order => "source", :conditions => ["DATE(created_at) = DATE(?)", Time.now], :order => "created_at")
   end
 
   def self.parse

@@ -22,8 +22,38 @@
     "nytimes":{
         "source": "NYTimes - Europe",
         "url": "http://feeds.nytimes.com/nyt/rss/Europe"
+    },
+    "cleanfinancial":{
+        "source": "CleanFinancial",
+        "url": "http://www.cleanfinancial.com/blog/feed/"
+    },
+    "telegraph_finance_markets":{
+        "source": "telegraph_finance_markets",
+        "url": "http://www.telegraph.co.uk/finance/markets/rss"
+    },
+    "telegraph_finance":{
+        "source": "telegraph_finance",
+        "url": "http://www.telegraph.co.uk/finance/rss"
+    },
+    "bbc_business":{
+        "source": "bbc_business",
+        "url": "http://feeds.bbci.co.uk/news/business/rss.xml"
+    },
+    "google_group_ukfinance_50_newmsg":{
+        "source": "google_group_ukfinance_50_newmsg",
+        "url": "http://groups.google.com/group/uk.finance/feed/rss_v2_0_msgs.xml?num=50"
+    },
+    "google_group_ukfinance_50_new_topic":{
+        "source": "google_group_ukfinance_50_new_topic",
+        "url": "http://groups.google.com/group/uk.finance/feed/rss_v2_0_topics.xml?num=50http://groups.google.com/group/uk.finance/feed/rss_v2_0_topics.xml?num=50"
+    },
+    "fx_traders":{
+        "source": "fx_traders",
+        "url": "http://fxtraders.eu/rss/?mode=all"
+    },
+    "uk_business_forum":{
+        "source": "uk_business_forum",
+        "url": "http://www.ukbusinessforums.co.uk/forums/external.php?type=RSS2"
     }
-
-
 }
 

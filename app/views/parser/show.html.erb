@@ -1,7 +1,9 @@
 <h1> Feeds </h1>
 
 <% @feeds.each do |item| %>
-    <h2> <%=  p item.title.html_safe    %> </h2>
-    <p> <%=  p item.content    %> </p>
+        <%= p item.source %>
+        <h2> <%=  p item.title.html_safe    %> </h2>
+        <p> <%=  p item.content    %> </p>
+
 <% end %>
 
