@@ -3,6 +3,7 @@ require File.dirname(__FILE__) + '/../helpers/hash.rb'
 require File.dirname(__FILE__) + '/../helpers/shares_data.rb'
 
 class HomeController < ApplicationController
+  caches_page :index
 
   def index
     ParserController.parse

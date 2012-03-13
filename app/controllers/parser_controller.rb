@@ -3,6 +3,7 @@ require 'open-uri'
 require 'json'
 
 class ParserController < ApplicationController
+  caches_page :index
   def show
     @feeds = Feed.all(:order => "source", :conditions => ["DATE(created_at) = DATE(?)", Time.now], :order => "created_at")
   end
