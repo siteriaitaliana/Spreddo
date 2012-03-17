@@ -2,6 +2,7 @@ Spreddo::Application.routes.draw do
   resources :feeds
 
   get "parser/show"
+  get "parser/show_per_share"
 
   #match 'show/:id' => 'parser#show'
   get "home/index"

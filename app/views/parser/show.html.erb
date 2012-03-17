@@ -2,8 +2,8 @@
 <%= link_to("Top 10 shares", :action => 'index', :controller => 'home')%>
 <% @feeds.each do |item| %>
         <% #TODO - order by source  %>
-        <h2> <%=  p item.title.html_safe    %> </h2>
-        <pre class='feed_content'><%=  p item.content.html_safe     %></pre>
+        <h2> <%= raw item.title    %> </h2>
+        <pre class='feed_content'><%= raw item.content     %></pre>
         <%  #TODO - not show html tag %>
 <% end %>
 
