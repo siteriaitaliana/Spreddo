@@ -1,11 +1,8 @@
-<h1>Top 10 active:</h1>
+<h1>Top 15 active:</h1>
 
-<% @matches.sort_by { |k,v| v }.reverse.first(10).each do |share_name,total_match| %>
-
-   <h2><%="#{share_name.upcase} = #{total_match}" %></h2>
-    <%= link_to("Show related news", :action => 'show_per_share', :controller => 'parser', :share => share_name)%>
-    <% #TODO: Add link to corresponding articles %>
+<% @matches.each do |share_name,total_match| %>
+  <h2><%="#{share_name.upcase} = #{total_match}" %></h2>
+  <%= link_to("Show related news", :action => 'show_per_share', :controller => 'home', :share => share_name)%>
 <% end %>
 
-
-<p><%= link_to("See all news", :action => 'show', :controller => 'parser')%></p>
+<p><%= link_to("See all news", :action => 'show', :controller => 'home')%></p>

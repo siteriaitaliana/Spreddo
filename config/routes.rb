@@ -1,11 +1,10 @@
 Spreddo::Application.routes.draw do
   resources :feeds
 
-  get "parser/show"
-  get "parser/show_per_share"
+  get "home/show"
+  get "home/show_per_share"
 
   #match 'show/:id' => 'parser#show'
-  get "home/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
