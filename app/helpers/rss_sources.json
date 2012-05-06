@@ -54,6 +54,30 @@
     "uk_business_forum":{
         "source": "uk_business_forum",
         "url": "http://www.ukbusinessforums.co.uk/forums/external.php?type=RSS2"
+    },
+    "livecharts": {
+        "source": "livecharts",
+        "url": "http://www.livecharts.co.uk/livewire/feed/"
+    },
+    "moneyweek":{
+        "source": "moneyweek",
+        "url": "http://www.moneyweek.com/rss-investing.xml"
     }
 }
+
+
+/*"stockcharts":{
+"source": "stockcharts",
+"url": "http://www.stockcharts.com/blogs/atom.xml"
+}
+ ,
+ "ig_markets": {
+ "source": "igindex_markets",
+ "url": "http://www.igmarkets.com.au/cfd/rss/market-updates.xml?"
+ },
+ "ig_dailyradar": {
+ "source": "igindex_dailyradar",
+ "url": "http://www.igmarkets.com.au/cfd/rss/trader-radar.xml?"
+ }
+ */
 

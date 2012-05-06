@@ -1,5 +1,5 @@
 <h1> All the News </h1>
-<%= link_to("Top 10 shares", :action => 'index', :controller => 'home')%>
+<%= link_to("Top 15 shares", :action => 'index', :controller => 'home')%>
 <% @feeds.each do |item| %>
         <% #TODO - order by source  %>
         <h2> <%= raw item.title    %> </h2>

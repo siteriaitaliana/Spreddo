@@ -1,12 +1,15 @@
 require 'simple-rss'
 require 'open-uri'
 require 'json'
+require 'pry'
 
 require File.dirname(__FILE__) + '/../helpers/hash.rb'
 require File.dirname(__FILE__) + '/../helpers/shares_data.rb'
 
 class HomeController < ApplicationController
-  #caches_page :index
+
+  before_filter :expire_if_old_feeds, :only => [:index]
+  caches_action  :index
   protect_from_forgery
 
   def index
@@ -22,6 +25,11 @@ class HomeController < ApplicationController
   end
 
   private
+  def expire_if_old_feeds
+      if Feed.last.created_at < Time.now - 3600
+      expire_action :action => :index
+    end
+  end
 
   def parse
     rss_sources_file = File.read(File.dirname(__FILE__) + '/../helpers/rss_sources.json')
@@ -30,9 +38,9 @@ class HomeController < ApplicationController
       temp = SimpleRSS.parse open(json[key]['url'])
       temp.items.each do |item|
         if json[key]['source'] == 'Bloomberg'
-          Feed.find_or_create_by_title(:title => item.title.force_encoding('UTF-8'), :source => json[key]['source'].force_encoding('UTF-8'), :content => item.content.force_encoding("UTF-8"))
+          Feed.find_or_create_by_title(:title => item.title.force_encoding('UTF-8'), :source => json[key]['source'], :content => item.content.force_encoding('UTF-8'))
         else
-          Feed.find_or_create_by_title(:title => item.title.force_encoding('UTF-8'), :source => json[key]['source'].force_encoding('UTF-8'), :content => item.description.force_encoding("UTF-8"))
+          Feed.find_or_create_by_title(:title => item.title.force_encoding('UTF-8'), :source => json[key]['source'], :content => item.description.force_encoding('UTF-8'))
         end
       end
     end
@@ -43,7 +51,7 @@ class HomeController < ApplicationController
     @matches = {}
     SharesData.load_data
     SharesData.FTSE100.flatten.each {|value| @matches[value] = scan_rss(value)}
-    @matched.hash_revert.reverse.first(15)
+    @matches = @matches.sort_by { |k,v| v }.reverse.first(15)
     #TODO: Link share symbol and share name search for the home and for the parser show section
   end
 
