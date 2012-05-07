@@ -1,7 +1,7 @@
 class SharesData
   class << self
     def load_data
-        shares_list_file = File.dirname(__FILE__) + '/../helpers/shares.yml'
+        shares_list_file = File.dirname(__FILE__) + '/shares.yml'
         @@shares = YAML.load_file shares_list_file
     end
 

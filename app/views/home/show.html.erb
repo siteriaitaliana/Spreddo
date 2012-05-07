@@ -1,9 +1,13 @@
-<h1> All the News </h1>
+<h1> Today's News: </h1>
 <%= link_to("Top 15 shares", :action => 'index', :controller => 'home')%>
+
 <% @feeds.each do |item| %>
+    <div id="share_article">
         <% #TODO - order by source  %>
         <h2> <%= raw item.title    %> </h2>
-        <pre class='feed_content'><%= raw item.content     %></pre>
+        <p><%= raw item.content     %></p>
         <%  #TODO - not show html tag %>
+        </div>
 <% end %>
+
 

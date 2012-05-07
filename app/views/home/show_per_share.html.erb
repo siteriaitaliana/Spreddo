@@ -1,6 +1,5 @@
-<h1> All the News </h1>
+<h1> All the today's News for <%=  @share %>: </h1>
 <%= link_to("Top 15 shares", :action => 'index', :controller => 'home')%>
-
 
 <% @feeds.each do |key,value| %>
     <% #TODO - order by source  %>
@@ -8,6 +7,11 @@
         <h2> <%= raw key    %> </h2>
         <p><%= raw value  %></p>
     </div>
+    <div id="share_trend">
+      <h2><%=  "Share: " + @share %></h2>
+      <p><%= "Value: " +  @value %></p>
+      <p><%= "Change(%): " +  @change + ' (' +@change_percentuage + ')' %></p>
+      <p><%= "Quote time: " + @last_time_quote %></p>
+    </div>
     <%  #TODO - not show html tag %>
 <% end %>
-

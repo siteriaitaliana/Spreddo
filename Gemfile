@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'simple-rss'
 gem 'pry'
 gem 'json'
+gem 'rest-client'
 
 
 # Gems used only for assets and not required
