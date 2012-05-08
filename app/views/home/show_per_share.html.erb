@@ -7,11 +7,13 @@
         <h2> <%= raw key    %> </h2>
         <p><%= raw value  %></p>
     </div>
-    <div id="share_trend">
-      <h2><%=  "Share: " + @share %></h2>
-      <p><%= "Value: " +  @value %></p>
-      <p><%= "Change(%): " +  @change + ' (' +@change_percentuage + ')' %></p>
-      <p><%= "Quote time: " + @last_time_quote %></p>
-    </div>
     <%  #TODO - not show html tag %>
 <% end %>
+
+<div id="share_trend">
+  <h2><%=  "Share: " + @share %></h2>
+  <p><%= "Value: " +  @value %></p>
+  <p><%= "Change(%): " +  @change + ' (' +@change_percentuage + ')' %></p>
+  <p><%= "Quote time: " + @last_time_quote %></p>
+</div>
+

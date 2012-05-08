@@ -80,15 +80,3 @@
  "url": "http://www.igmarkets.com.au/cfd/rss/trader-radar.xml?"
  }
  */
-
- { 'id': '11248216' ,
-'t' : 'BARC' ,
-'e' : 'LON' ,
-'l' : '210.06' ,
-'l_cur' : 'GBX210.06' ,
-'s': '0' ,
-'ltt':'5:09PM BST' ,
-'lt' : 'May 4, 5:09PM BST' ,
-'c' : '+1.66' ,
-'cp' : '0.80' ,
-'ccol' : 'chg' }
